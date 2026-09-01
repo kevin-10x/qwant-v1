@@ -1,0 +1,14 @@
+{
+  "name": "quant",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-contained quant engine: market structure + Fibonacci strategies, backtester, and daily quant report.",
+  "scripts": {
+    "backtest": "node src/run-backtest.mjs",
+    "daily": "node src/run-daily.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

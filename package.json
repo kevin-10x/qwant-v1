@@ -54,6 +54,7 @@
     "@trpc/client": "^11.8.1",
     "@trpc/react-query": "^11.8.1",
     "@trpc/server": "^11.8.1",
+    "@vercel/speed-insights": "^2.0.0",
     "axios": "^1.18.1",
     "binance-api-node": "^0.13.10",
     "class-variance-authority": "^0.7.1",
@@ -90,11 +91,16 @@
     "zod": "^4.3.5"
   },
   "devDependencies": {
+    "@hono/vite-dev-server": "^0.26.1",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.18",
+    "esbuild": "^0.21.5",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3",
     "vite": "^5.4.14"
   }

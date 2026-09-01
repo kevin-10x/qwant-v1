@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-08-30T20:20:22.321Z",
+  "timeframe": "1d",
+  "reports": [
+    {
+      "symbol": "EURUSD",
+      "market": "forex",
+      "timeframe": "1d",
+      "generatedAt": "2026-08-28T00:00:00.000Z",
+      "price": 1.1643,
+      "change1dPct": -0.017174753112941175,
+      "indicators": {
+        "rsi": 62.2,
+        "atrPct": 0.19,
+        "ema20": 1.16,
+        "ema50": 1.15
+      },
+      "structure": {
+        "trend": "neutral",
+        "lastHigh": null,
+        "lastLow": null,
+        "lastSwing": null
+      },
+      "fibonacci": {
+        "force": null,
+        "retracements": [],
+        "extensions": [],
+        "nearest": null
+      },
+      "signal": {
+        "dir": "HOLD",
+        "confidence": 0,
+        "reasons": [],
+        "entry": null,
+        "stopLoss": null,
+        "takeProfit": null,
+        "ext1272": null,
+        "ext1618": null
+      }
+    }
+  ]
+}

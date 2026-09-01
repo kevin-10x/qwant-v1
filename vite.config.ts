@@ -3,13 +3,16 @@ import path from "path"
 const __dirname = import.meta.dirname
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
-import { inspectAttr } from 'kimi-plugin-inspect-react'
+
+// NOTE: the previous config imported `kimi-plugin-inspect-react` (inspectAttr()).
+// That package requires Vite 7 while this repo pins Vite 5 and it was never in
+// the lockfile, so it was removed to keep the local build working.
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     devServer({ entry: "api/boot.ts", exclude: [/^\/(?!api\/).*$/] }),
-    inspectAttr(), react()],
+    react()],
   server: {
     port: 3000,
   },
