@@ -6,8 +6,8 @@
 //
 // Position sizing: risk a fixed % of equity per trade, driven by SL distance.
 
-import type { OHLCV } from "../market-data";
-import type { StrategyFn } from "./strategies";
+import type { OHLCV } from "../market-data.js";
+import type { StrategyFn } from "./strategies.js";
 
 export interface BacktestOptions {
   initialBalance?: number;

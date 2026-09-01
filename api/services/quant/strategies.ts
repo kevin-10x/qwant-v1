@@ -2,10 +2,10 @@
 // Each strategy is evaluated at bar index `i` using ONLY bars up to and including
 // index `i` (no lookahead). Returns an entry decision or null.
 
-import type { OHLCV } from "../market-data";
-import { ema, rsi, atr, lastNonNull } from "./indicators";
-import { swingPoints } from "./marketStructure";
-import { upLegLevels, downLegLevels, EXTENSIONS } from "./fibonacci";
+import type { OHLCV } from "../market-data.js";
+import { ema, rsi, atr, lastNonNull } from "./indicators.js";
+import { swingPoints } from "./marketStructure.js";
+import { upLegLevels, downLegLevels, EXTENSIONS } from "./fibonacci.js";
 
 export type EntryDirection = "LONG" | "SHORT";
 

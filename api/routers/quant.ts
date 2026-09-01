@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "../middleware";
+import { createRouter, publicQuery } from "../middleware.js";
 import {
   fetchQuantOHLCV,
   getQuantSymbols,
@@ -7,10 +7,10 @@ import {
   MARKET_IDS,
   TIMEFRAME_IDS,
   type MarketKind,
-} from "../services/quant/marketData";
-import { STRATEGIES, STRATEGY_LABELS, STRATEGY_IDS, type StrategyId } from "../services/quant/strategies";
-import { runBacktest } from "../services/quant/backtest";
-import { generateQuantReport } from "../services/quant/report";
+} from "../services/quant/marketData.js";
+import { STRATEGIES, STRATEGY_LABELS, STRATEGY_IDS, type StrategyId } from "../services/quant/strategies.js";
+import { runBacktest } from "../services/quant/backtest.js";
+import { generateQuantReport } from "../services/quant/report.js";
 
 export const quantRouter = createRouter({
   // Run a single market-structure + Fibonacci backtest.

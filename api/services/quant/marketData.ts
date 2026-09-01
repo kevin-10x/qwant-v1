@@ -2,7 +2,7 @@
 // Crypto: Binance. Stocks/commodities: Yahoo Finance. Forex: Frankfurter (ECB, daily).
 // Deterministic synthetic fallback so the engine always produces output offline.
 
-import type { OHLCV } from "../market-data";
+import type { OHLCV } from "../market-data.js";
 
 export type MarketKind = "crypto" | "stocks" | "commodities" | "forex";
 

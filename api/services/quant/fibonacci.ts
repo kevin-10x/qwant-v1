@@ -1,7 +1,7 @@
 // fibonacci.ts — Fibonacci retracement and extension levels from swing legs.
 
-import type { OHLCV } from "../market-data";
-import { swingPoints, trendOf } from "./marketStructure";
+import type { OHLCV } from "../market-data.js";
+import { swingPoints, trendOf } from "./marketStructure.js";
 
 export const RETRACEMENTS = [0.236, 0.382, 0.5, 0.618, 0.786] as const;
 export const EXTENSIONS = [1.272, 1.618, 2.0, 2.618] as const;

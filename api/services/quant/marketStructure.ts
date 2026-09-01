@@ -1,7 +1,7 @@
 // marketStructure.ts — swing highs/lows, market-structure trend classification,
 // and a range detector.
 
-import type { OHLCV } from "../market-data";
+import type { OHLCV } from "../market-data.js";
 
 export interface SwingPoint {
   index: number;

@@ -1,9 +1,9 @@
 // report.ts — daily quant report: latest signal + market structure + fib levels.
 
-import type { OHLCV } from "../market-data";
-import { rsi, atr, ema, lastNonNull } from "./indicators";
-import { buildFibSnapshot, type FibSnapshot } from "./fibonacci";
-import type { MarketKind } from "./marketData";
+import type { OHLCV } from "../market-data.js";
+import { rsi, atr, ema, lastNonNull } from "./indicators.js";
+import { buildFibSnapshot, type FibSnapshot } from "./fibonacci.js";
+import type { MarketKind } from "./marketData.js";
 
 interface SignalResult {
   dir: "BUY" | "SELL" | "HOLD";
