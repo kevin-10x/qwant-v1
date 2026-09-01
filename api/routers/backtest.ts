@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "../middleware";
-import { runBacktest, type BacktestConfig } from "../services/backtest";
+import { createRouter, publicQuery } from "../middleware.js";
+import { runBacktest, type BacktestConfig } from "../services/backtest.js";
 
 export const backtestRouter = createRouter({
   // Run backtest

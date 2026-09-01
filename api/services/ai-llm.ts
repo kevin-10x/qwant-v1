@@ -1,6 +1,6 @@
 import axios from "axios";
-import type { OHLCV } from "./market-data";
-import type { IndicatorValues } from "./indicators";
+import type { OHLCV } from "./market-data.js";
+import type { IndicatorValues } from "./indicators.js";
 
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const GROQ_MODEL = "llama-3.1-8b-instant"; // Free tier model

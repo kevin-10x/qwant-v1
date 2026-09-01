@@ -1,6 +1,6 @@
-import { getAIModel, type AIPrediction } from "./ai-engine";
-import { calculateIndicators } from "./indicators";
-import { fetchMarketData } from "./market-data";
+import { getAIModel, type AIPrediction } from "./ai-engine.js";
+import { calculateIndicators } from "./indicators.js";
+import { fetchMarketData } from "./market-data.js";
 
 export interface SignalConfig {
   minConfidence: number;

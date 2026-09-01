@@ -1,4 +1,4 @@
-import { fetchMarketData } from "./market-data";
+import { fetchMarketData } from "./market-data.js";
 
 export interface PaperPosition {
   id: string;

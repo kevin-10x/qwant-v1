@@ -1,11 +1,11 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "../middleware";
+import { createRouter, publicQuery } from "../middleware.js";
 import {
   getAIModel,
   resetAIModel,
   getFeatureImportance,
-} from "../services/ai-engine";
-import { fetchMarketData } from "../services/market-data";
+} from "../services/ai-engine.js";
+import { fetchMarketData } from "../services/market-data.js";
 
 export const aiRouter = createRouter({
   // Get AI prediction for a symbol

@@ -1,14 +1,14 @@
-import { authRouter } from "./auth-router";
-import { createRouter, publicQuery } from "./middleware";
-import { marketRouter } from "./routers/market";
-import { signalsRouter } from "./routers/signals";
-import { aiRouter } from "./routers/ai";
-import { tradesRouter } from "./routers/trades";
-import { notificationsRouter } from "./routers/notifications";
-import { backtestRouter } from "./routers/backtest";
-import { subscriptionsRouter } from "./routers/subscriptions";
-import { mt5Router } from "./routers/mt5";
-import { quantRouter } from "./routers/quant";
+import { authRouter } from "./auth-router.js";
+import { createRouter, publicQuery } from "./middleware.js";
+import { marketRouter } from "./routers/market.js";
+import { signalsRouter } from "./routers/signals.js";
+import { aiRouter } from "./routers/ai.js";
+import { tradesRouter } from "./routers/trades.js";
+import { notificationsRouter } from "./routers/notifications.js";
+import { backtestRouter } from "./routers/backtest.js";
+import { subscriptionsRouter } from "./routers/subscriptions.js";
+import { mt5Router } from "./routers/mt5.js";
+import { quantRouter } from "./routers/quant.js";
 
 export const appRouter = createRouter({
   ping: publicQuery.query(() => ({ ok: true, ts: Date.now() })),

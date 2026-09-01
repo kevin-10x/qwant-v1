@@ -1,11 +1,11 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "../middleware";
+import { createRouter, publicQuery } from "../middleware.js";
 import {
   generateSignal,
   scanMarkets,
   getMarketScanner,
-} from "../services/signals";
-import { SUPPORTED_SYMBOLS } from "../services/market-data";
+} from "../services/signals.js";
+import { SUPPORTED_SYMBOLS } from "../services/market-data.js";
 
 export const signalsRouter = createRouter({
   // Generate signal for a single symbol

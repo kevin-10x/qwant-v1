@@ -1,6 +1,6 @@
 import { createTransport, type Transporter } from "nodemailer";
 import axios from "axios";
-import type { GeneratedSignal } from "./signals";
+import type { GeneratedSignal } from "./signals.js";
 
 // Email configuration
 let emailTransporter: Transporter | null = null;

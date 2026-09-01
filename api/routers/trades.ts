@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "../middleware";
+import { createRouter, publicQuery } from "../middleware.js";
 import {
   openPaperTrade,
   closePaperTrade,
@@ -7,7 +7,7 @@ import {
   getTradeHistory,
   resetPortfolio,
   updatePositions,
-} from "../services/paper-trading";
+} from "../services/paper-trading.js";
 
 export const tradesRouter = createRouter({
   // Get portfolio summary

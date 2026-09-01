@@ -1,12 +1,12 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "../middleware";
+import { createRouter, publicQuery } from "../middleware.js";
 import {
   sendEmailAlert,
   sendTelegramAlert,
   testNotifications,
   sendTelegramWelcome,
-} from "../services/notifications";
-import { generateSignal } from "../services/signals";
+} from "../services/notifications.js";
+import { generateSignal } from "../services/signals.js";
 
 export const notificationsRouter = createRouter({
   // Send test email

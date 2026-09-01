@@ -1,11 +1,11 @@
 import type { Hono } from "hono";
-import { createRouter, publicQuery } from "../middleware";
+import { createRouter, publicQuery } from "../middleware.js";
 import {
   receiveMT5Signal,
   getMT5Signals,
   clearMT5Signals,
   type MT5Signal,
-} from "../services/mt5";
+} from "../services/mt5.js";
 
 // tRPC router for MT5-related queries/mutations
 export const mt5Router = createRouter({

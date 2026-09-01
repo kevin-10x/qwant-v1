@@ -1,6 +1,6 @@
-import { fetchMarketData, type OHLCV } from "./market-data";
-import { calculateIndicators } from "./indicators";
-import { getAIModel } from "./ai-engine";
+import { fetchMarketData, type OHLCV } from "./market-data.js";
+import { calculateIndicators } from "./indicators.js";
+import { getAIModel } from "./ai-engine.js";
 
 export interface BacktestConfig {
   symbol: string;

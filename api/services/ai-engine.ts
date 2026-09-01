@@ -3,9 +3,9 @@ const { SLR } = require("ml-regression");
 import {
   calculateIndicators,
   generateAIFeatures,
-} from "./indicators";
-import type { OHLCV } from "./market-data";
-import { getLLMSentiment, type LLMSentimentResult } from "./ai-llm";
+} from "./indicators.js";
+import type { OHLCV } from "./market-data.js";
+import { getLLMSentiment, type LLMSentimentResult } from "./ai-llm.js";
 
 export interface AIPrediction {
   signal: "BUY" | "SELL" | "HOLD";

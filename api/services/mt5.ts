@@ -1,4 +1,4 @@
-import type { GeneratedSignal } from "./signals";
+import type { GeneratedSignal } from "./signals.js";
 
 // Types for incoming MT5 EA signal payload
 export interface MT5Signal {

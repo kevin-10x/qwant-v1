@@ -1,4 +1,4 @@
-import type { OHLCV } from "./market-data";
+import type { OHLCV } from "./market-data.js";
 
 export interface IndicatorValues {
   rsi14: number | null;

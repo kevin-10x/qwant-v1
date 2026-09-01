@@ -1,11 +1,11 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "../middleware";
+import { createRouter, publicQuery } from "../middleware.js";
 import {
   fetchMarketData,
   getCurrentPrice,
   SUPPORTED_SYMBOLS,
-} from "../services/market-data";
-import { calculateIndicators } from "../services/indicators";
+} from "../services/market-data.js";
+import { calculateIndicators } from "../services/indicators.js";
 
 export const marketRouter = createRouter({
   // Get supported symbols
