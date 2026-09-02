@@ -12,6 +12,7 @@ import { registerMT5Webhook } from "./routers/mt5.js";
 const app = new Hono<{ Bindings: HttpBindings }>();
 
 app.use(bodyLimit({ maxSize: 50 * 1024 * 1024 }));
+app.get("/api/health", (c) => c.json({ status: "ok", uptime: process.uptime() }));
 app.get(Paths.oauthCallback, createOAuthCallbackHandler());
 
 // Register raw MT5 webhook endpoint before tRPC handler

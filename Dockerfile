@@ -1,13 +1,15 @@
 # Multi-stage build for AI Trading Platform
 
 # Stage 1: Build the application
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-RUN npm ci
+
+# Install dependencies (with legacy peer deps to match Vercel install behavior)
+RUN npm ci --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -16,22 +18,22 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Production image
-FROM node:20-alpine AS production
+FROM node:22-alpine AS production
 
 WORKDIR /app
 
-# Install Python for AI microservices (optional)
-RUN apk add --no-cache python3 py3-pip
+ENV NODE_ENV=production
+ENV PORT=3000
 
 # Copy package files
 COPY package*.json ./
-RUN npm ci --production
+
+# Install production dependencies only
+RUN npm ci --omit=dev --legacy-peer-deps
 
 # Copy built application
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/db ./db
-COPY --from=builder /app/drizzle.config.ts ./
-COPY --from=builder /app/.env ./
 
 # Create downloads directory
 RUN mkdir -p /app/downloads
@@ -40,8 +42,8 @@ RUN mkdir -p /app/downloads
 EXPOSE 3000
 
 # Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/api/health', (r) => r.statusCode === 200 ? process.exit(0) : process.exit(1))"
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
+  CMD wget -qO- http://localhost:3000/api/health || exit 1
 
 # Start the application
 CMD ["node", "dist/boot.js"]
